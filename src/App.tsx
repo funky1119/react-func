@@ -1,10 +1,11 @@
 import React from "react";
-import { Todo } from "./screens/Todo";
+import Circle from "./screens/Circle/Circle";
 
 function App() {
   return (
-    <div className="App">
-      <Todo />
+    <div>
+      <Circle bgColor={"teal"} borderColor="black" />
+      <Circle bgColor={"tomato"} />
     </div>
   );
 }
