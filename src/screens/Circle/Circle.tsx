@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-interface CircleProps {
-  bgColor: string;
-  borderColor?: string;
-}
-
 interface ContainerProps {
   bgColor: string;
   borderColor: string;
@@ -16,10 +11,27 @@ const Container = styled.div<ContainerProps>`
   background-color: ${(props) => props.bgColor};
   border-radius: 100px;
   border: 3px solid ${(props) => props.borderColor};
+  justify-content: center;
+  align-items: center;
+  display: flex;
 `;
 
-function Circle({ bgColor, borderColor }: CircleProps) {
-  return <Container bgColor={bgColor} borderColor={borderColor ?? bgColor} />;
+interface CircleProps {
+  bgColor: string;
+  borderColor?: string;
+  text?: string;
+}
+
+function Circle({
+  bgColor,
+  borderColor,
+  text = "3.4 State 부터 하면 됨",
+}: CircleProps) {
+  return (
+    <Container bgColor={bgColor} borderColor={borderColor ?? bgColor}>
+      {text}
+    </Container>
+  );
 }
 
 export default Circle;

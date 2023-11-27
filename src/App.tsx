@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <Circle bgColor={"teal"} borderColor="black" />
-      <Circle bgColor={"tomato"} />
+      <Circle bgColor={"tomato"} text={"그렇다고 한다"} />
     </div>
   );
 }
