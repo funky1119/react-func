@@ -1,5 +1,4 @@
 function ErrorComponent() {
-  return <h1>에러 발생</h1>;
+  return <h1>This component crashed</h1>;
 }
-
 export default ErrorComponent;
